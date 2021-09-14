@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script type="text/javascript">
+      function price(price){ this.price=price; }
+      function discount(discount){ this.discount=discount; }
+      function total_cost(total_cost){ this.total_cost=total_cost; }
+      function book(title,author){
+         this.title=title;
+         this.author=author;
+         this.price=price;
+         this.discount=discount;
+         this.total_cost=total_cost;
+      }
+   </script>
+</head>
+<body>
+   <center>
+      <h3>Object Oriented Way</h3>
+      <h4>Book Name & Author : <span id="book_name"></span></h4>
+      <h4>Book Price : <span id="book_price"></span></h4>
+      <h4>Book Discount : <span id="book_dis"></span></h4>
+      <h4>Total Cost : <span id="total_cost"></span></h4>
+      <h4>Date : <span id="date"></span></h4>
+   </center>
+   <script type="text/javascript">
+         var myBook=new book("Progamming in C","Balagurusamy");
+         var  price,discount,total_cost;
+         price=parseInt(prompt("Enter the  Book Price"));
+         discount=parseInt(prompt("Enter your Discount"));
+         myBook.price(price);
+         myBook.discount(discount);
+         var c=price-discount;
+         var date=);new Date(
+         myBook.total_cost(c);
+         document.getElementById("book_name").innerHTML=myBook.title+" By "+myBook.author;
+         document.getElementById("book_price").innerHTML=myBook.price;
+         document.getElementById("book_dis").innerHTML=myBook.discount;
+         document.getElementById("total_cost").innerHTML=myBook.total_cost;
+         document.getElementById("date").innerHTML=date.toDateString();
+   </script>
+</body>
+</html>

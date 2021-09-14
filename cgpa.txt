@@ -1,0 +1,32 @@
+
+<html>
+<body onload="getdata()">
+   <script type="text/javascript">
+      var i,j,cgpa,credit,total_grade_point=0;
+      var [ subject_mark,grade_point,grade ]=[ [],[],[] ];
+      var subject=new Array('Cyber Secruity','AI and ML','MAD','IP','SQT','CCT');
+      function getdata(){
+         for(i=0;i<6;i++){
+            subject_mark[i]=prompt("Enter your"+" "+subject[i]);
+            if(subject_mark[i]>90){ grade_point[i]="10"; grade[i]="O"; }
+            else if(subject_mark[i]>80){ grade_point[i]="9"; grade[i]="A+";}
+            else if(subject_mark[i]>70){ grade_point[i]="8"; grade[i]="A";}
+            else if(subject_mark[i]>60){ grade_point[i]="7"; grade[i]="B+";}
+            else if(subject_mark[i]>50){ grade_point[i]="6"; grade[i]="B";}
+            else{ grade_point[i]="0"; grade[i]="U"; }
+         }
+         for(j=0;j<6;j++){
+            document.write("<center><h3>"+ subject[j]+" "+subject_mark[j]+ "</h3></center>");
+            total_grade_point+=parseInt(grade_point[j]);
+         }
+         document.write("<center><button onclick="+"calculate()"+">Get CGPA</button></center>");
+      }
+      function calculate(){
+         credit=(subject.length)*10;
+         total_grade_point=total_grade_point*10;
+         cgpa=total_grade_point/credit;
+         alert("CGPA RESULT :"+" "+cgpa);
+      }
+   </script>
+</body>
+</html>

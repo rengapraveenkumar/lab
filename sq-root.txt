@@ -1,0 +1,22 @@
+
+<html> 
+<head>  
+</head> 
+<body>
+<script type="text/javascript" src="message.js"></script>
+<center>
+            <h2>Square Root</h2>
+            <button onclick="root()">Generate</button>
+</center>
+</body>
+</html>
+
+
+----------------
+
+
+    function root(){
+            var n=prompt("Enter the Limit", "10");
+            for(i=1;i<=n;i++){
+                        document.write("<center>"+i+"<sup>2</sup> = "+i*i);
+    }}
